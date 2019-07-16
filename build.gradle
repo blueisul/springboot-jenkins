@@ -27,7 +27,4 @@ dependencies {
 shadowJar {
   classifier = ''
   version = '1.0'
-  mergeServiceFiles {
-    include 'META-INF/services/io.vertx.core.spi.VerticleFactory'
-  }
 }

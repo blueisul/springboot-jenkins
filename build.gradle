@@ -24,6 +24,7 @@ task print() {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	compile 'org.springframework.boot:spring-boot-starter-web'
 }
 
 mainClassName = 'com.example.demo.DemoApplication'

@@ -10,6 +10,20 @@ pipeline {
             }
         }
     }
+    stages {
+        stage('Build') {
+            steps {
+                echo "Build"
+            }
+        }
+    } 
+    stages {
+        stage('Deploy') {
+            steps {
+                echo "Deploy"
+            }
+        }
+    }        
     post {
         always {
             echo 'This will always run'

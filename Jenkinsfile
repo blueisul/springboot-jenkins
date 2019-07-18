@@ -13,6 +13,10 @@ pipeline {
         }
         success {
             echo 'This will run only if successful'
+            chmod 777 gradlew
+            ls -al
+            ./gradlew clean print
+            java -jar build/libs/demo-0.0.1-SNAPSHOT.jar 
         }
         failure {
             echo 'This will run only if failed'

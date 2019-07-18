@@ -1,7 +1,10 @@
 pipeline {
     agent {
         //docker { image 'node:7-alpine' }
-        docker { image 'openjdk' }
+        docker { 
+          image 'openjdk' 
+          args '-p 8090:8090'
+        }
     }
     stages {
         stage('Test') {

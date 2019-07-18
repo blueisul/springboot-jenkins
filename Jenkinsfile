@@ -17,7 +17,7 @@ pipeline {
             sh 'ls -al'
             sh './gradlew clean print'
             sh './gradlew build'
-            sh 'java -jar build/libs/demo-0.0.1-SNAPSHOT.jar'
+            sh 'java -jar build/libs/demo-0.0.1-SNAPSHOT.jar &'
         }
         failure {
             echo 'This will run only if failed'

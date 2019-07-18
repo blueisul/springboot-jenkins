@@ -15,6 +15,7 @@ pipeline {
         }
         success {
             echo 'This will run only if successful'
+            sh 'pwd'
             sh 'chmod 777 gradlew'
             sh 'ls -al'
             sh './gradlew clean print'

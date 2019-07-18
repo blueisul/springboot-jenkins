@@ -18,6 +18,7 @@ pipeline {
             sh './gradlew clean print'
             sh './gradlew build'
             sh 'BUILD_ID=dontKillMe nohup java -jar build/libs/demo-0.0.1-SNAPSHOT.jar &'
+            sh 'curl localhost:8090'
         }
         failure {
             echo 'This will run only if failed'
